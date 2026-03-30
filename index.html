@@ -1,45 +1,205 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FOB</title>
-    <link rel="icon" href="./Images/my-rook.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400&family=Engagement&family=Fjalla+One&family=Fondamento:ital@0;1&family=Merriweather+Sans:wght@300&family=Montez&family=Montserrat+Alternates:ital@0;1&family=Oregano&family=Parisienne&family=Poppins&family=Ribeye+Marrow&family=Special+Elite&family=Syncopate&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./CSS/styles.css" />
-  </head>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>FOB</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="./CSS/styles.css">
+</head>
+<body>
 
-  <body>
-    <main>
-      <section>
-        <h1 class="nack"><b>Farook Ologundudu</b></h1>
-        <h3 class="nick"><b>Mr Blakk</b></h3>
-      </section>
-    </main>
+<!-- NAV — desktop only -->
+<nav>
+<div class="container">
+<span class="nav-logo">farook.dev</span>
+<ul class="nav-links">
+<li><a href="#learning">Learning</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+</nav>
 
-    <!-- <header><b>New Portfolio</b></header>
-    <nav></nav>
-    <aside>
-      <h3>
-        Farook Ologundudu
-        <br />
-        (Mr Blakk)
-      </h3>
+<!-- FLOATING NAV — mobile/tablet only -->
+<div class="fab-nav" id="fabNav">
+<div class="fab-menu" id="fabMenu">
+<a href="#contact" class="fab-item" onclick="closeFab()">Contact</a>
+<a href="#projects" class="fab-item" onclick="closeFab()">Projects</a>
+<a href="#learning" class="fab-item" onclick="closeFab()">Learning</a>
+</div>
+<button class="fab-btn" id="fabBtn" onclick="toggleFab()" aria-label="Open navigation">
+<svg id="fabIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+<line x1="3" y1="6" x2="21" y2="6"/>
+<line x1="3" y1="12" x2="21" y2="12"/>
+<line x1="3" y1="18" x2="21" y2="18"/>
+</svg>
+</button>
+</div>
 
-      <h5>Web/Mobile App Dev</h5>
-    </aside>
+<!-- HEADER -->
+<header>
+    <div class="container">
+        <p class="label">Flutter Developer</p>
+        <h1>Farook<br/>Ologundudu</h1>
+        <p class="tagline">
+            Turning complex business logic into <em>clean, performant mobile apps</em> —
+            one widget at a time.
+        </p>
+        <div class="header-meta">
+            <span class="pill">
+                <span class="dot"></span>
+                    Open to opportunities
+            </span>
+        </div>
+    </div>
+</header>
 
-    <section>
-      <h5>I need to start taking this serious as soon as possible</h5>
-      <h5>I need to start taking this serious as soon as possible</h5>
-      <h5>I need to start taking this serious as soon as possible</h5>
-    </section> -->
-    <script src="./JS/main.js"></script>
-  </body>
+<!-- LEARNING LOG -->
+<section id="learning">
+<div class="container">
+<div class="section-header">
+<span class="section-num">01</span>
+<h2>Learning Log</h2>
+</div>
+
+<div class="course-card">
+<p class="course-title">Developing Mobile Apps with Flutter Specialization</p>
+<p class="course-provider">// Coursera · In Progress</p>
+
+<div class="progress-label">
+<span>Progress</span>
+<span id="progress-pct">15%</span>
+</div>
+<div class="progress-track">
+<div class="progress-fill" id="progress-fill"></div>
+</div>
+
+<p class="concepts-label">Core Concepts Mastered</p>
+<div class="concepts-grid">
+<!-- ─── UPDATE THIS LIST AS YOU COMPLETE MODULES ─── -->
+<span class="concept-tag">Dart Basics</span>
+<span class="concept-tag">Null Safety</span>
+<span class="concept-tag">Widget Tree</span>
+<span class="concept-tag">Stateless Widgets</span>
+<span class="concept-tag">Stateful Widgets</span>
+<span class="concept-tag">Hot Reload</span>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- PROJECT GALLERY -->
+<section id="projects">
+<div class="container">
+<div class="section-header">
+<span class="section-num">02</span>
+<h2>Project Gallery</h2>
+</div>
+
+<div class="projects-grid">
+
+<!-- ─── PROJECT 1 ─── UPDATE TITLE, DESC & LINK ─── -->
+<div class="project-card">
+<p class="project-type">Flutter · Mobile App</p>
+<p class="project-title">Project Alpha</p>
+<p class="project-desc">
+<strong>Problem:</strong> Describe the problem this app solves.<br/>
+<strong>Solution:</strong> Explain how you solved it with Flutter/Dart.
+</p>
+<a class="project-link" href="https://github.com/yourusername/project-alpha" target="_blank">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+View on GitHub
+</a>
+</div>
+
+<!-- ─── PROJECT 2 ─── -->
+<div class="project-card">
+<p class="project-type">Flutter · Mobile App</p>
+<p class="project-title">Project Beta</p>
+<p class="project-desc">
+<strong>Problem:</strong> Describe the problem this app solves.<br/>
+<strong>Solution:</strong> Explain how you solved it with Flutter/Dart.
+</p>
+<a class="project-link" href="https://github.com/yourusername/project-beta" target="_blank">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+View on GitHub
+</a>
+</div>
+
+<!-- ─── PROJECT 3 ─── -->
+<div class="project-card">
+<p class="project-type">Dart · CLI Tool</p>
+<p class="project-title">Project Gamma</p>
+<p class="project-desc">
+<strong>Problem:</strong> Describe the problem this app solves.<br/>
+<strong>Solution:</strong> Explain how you solved it with Flutter/Dart.
+</p>
+<a class="project-link" href="https://github.com/yourusername/project-gamma" target="_blank">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+View on GitHub
+</a>
+</div>
+
+<!-- ─── PROJECT 4 ─── -->
+<div class="project-card">
+<p class="project-type">Flutter · Mobile App</p>
+<p class="project-title">Project Delta</p>
+<p class="project-desc">
+<strong>Problem:</strong> Describe the problem this app solves.<br/>
+<strong>Solution:</strong> Explain how you solved it with Flutter/Dart.
+</p>
+<a class="project-link" href="https://github.com/yourusername/project-delta" target="_blank">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+View on GitHub
+</a>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="container">
+<div class="section-header">
+<span class="section-num">03</span>
+<h2>Contact</h2>
+</div>
+<p class="contact-line">Let's build something.</p>
+<div class="contact-links">
+
+<!-- ─── UPDATE HREF VALUES BELOW ─── -->
+<a class="contact-btn" href="https://linkedin.com/in/yourhandle" target="_blank">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+LinkedIn
+</a>
+
+<a class="contact-btn" href="https://github.com/yourusername" target="_blank">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+GitHub
+</a>
+
+<a class="contact-btn" href="mailto:your@email.com">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+Email
+</a>
+
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div class="container">
+<span class="footer-copy">© 2026 Farook Ologundudu</span>
+<span class="footer-copy">Built with HTML · CSS · JS</span>
+</div>
+</footer>
+
+<script src="./JS/main.js">
+</script>
+
+</body>
 </html>
