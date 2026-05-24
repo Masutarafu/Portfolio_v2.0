@@ -246,8 +246,8 @@ AMBIENT CURSOR GLOW
         position: fixed;
         pointer-events: none;
         z-index: 9999;
-        width: 500px;
-        height: 500px;
+        width: 750px;
+        height: 750px;
         border-radius: 50%;
         background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 70%);
         transform: translate(-50%, -50%);
